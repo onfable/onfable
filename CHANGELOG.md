@@ -6,8 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-06-10
+
 ### Added
 
+- `claude-fable-5` preset in the Anthropic provider setup (most powerful model — the namesake)
 - `/help` slash command in the interactive REPL
 - Unit test suite (vitest) covering tools, config redaction, and the memory store
 - Branded 404 page on onfable.xyz
@@ -29,5 +32,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - onfable.xyz website with one-line installers for macOS/Linux (`install.sh`) and Windows (`install.ps1`)
 - CI (typecheck, build, smoke test) and npm release workflow
 
-[Unreleased]: https://github.com/onfable/onfable/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/onfable/onfable/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/onfable/onfable/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/onfable/onfable/releases/tag/v0.1.0
