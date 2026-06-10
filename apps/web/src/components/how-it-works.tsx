@@ -33,7 +33,7 @@ export function HowItWorks() {
             </div>
             <h3 className="mt-4 font-medium">{step.title}</h3>
             <p className="mt-2 text-sm text-muted">{step.body}</p>
-            <code className="mt-4 block overflow-x-auto whitespace-nowrap rounded-md border border-edge bg-black px-3 py-2 font-[family-name:var(--font-geist-mono)] text-xs text-white/80">
+            <code className="scrollbar-none mt-4 block overflow-x-auto whitespace-nowrap rounded-md border border-edge bg-black px-3 py-2 font-[family-name:var(--font-geist-mono)] text-xs text-white/80">
               {step.code}
             </code>
           </div>

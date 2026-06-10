@@ -57,7 +57,7 @@ export function InstallTabs() {
           ))}
         </div>
         <div className="flex items-center gap-2 px-5 py-5">
-          <code className="flex-1 overflow-x-auto whitespace-nowrap font-[family-name:var(--font-geist-mono)] text-sm text-white/90">
+          <code className="scrollbar-none flex-1 overflow-x-auto whitespace-nowrap font-[family-name:var(--font-geist-mono)] text-sm text-white/90">
             <span className="select-none text-faint">{tab.prompt} </span>
             {tab.command}
           </code>
