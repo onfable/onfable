@@ -25,6 +25,9 @@ jobs:
       - name: Typecheck
         run: pnpm typecheck
 
+      - name: Test
+        run: pnpm --filter onfable test
+
       - name: Build
         run: pnpm build
 
