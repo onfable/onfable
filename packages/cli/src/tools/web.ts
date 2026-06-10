@@ -4,7 +4,7 @@ const FETCH_TIMEOUT_MS = 15_000;
 const MAX_CONTENT = 20_000;
 
 /** Crude but dependency-free HTML → readable text conversion. */
-function htmlToText(html: string): string {
+export function htmlToText(html: string): string {
   return html
     .replace(/<script[\s\S]*?<\/script>/gi, "")
     .replace(/<style[\s\S]*?<\/style>/gi, "")

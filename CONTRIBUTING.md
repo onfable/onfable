@@ -18,6 +18,7 @@ pnpm build
 |---|---|
 | `pnpm build` | Build CLI + website |
 | `pnpm typecheck` | Typecheck everything (what CI runs) |
+| `pnpm --filter onfable test` | Run the CLI unit tests (vitest) |
 | `pnpm dev:cli` | Rebuild the CLI on every change |
 | `pnpm dev:web` | Run the website at localhost:3000 |
 
