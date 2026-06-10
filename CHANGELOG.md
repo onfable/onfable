@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `/help` slash command in the interactive REPL
+- Unit test suite (vitest) covering tools, config redaction, and the memory store
+- Branded 404 page on onfable.xyz
+- Tools reference documentation (`docs/tools.md`), security policy, changelog, and PR template
+
 ## [0.1.0] - 2026-06-10
 
 ### Added
