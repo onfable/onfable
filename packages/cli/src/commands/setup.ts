@@ -16,7 +16,8 @@ import type { ProviderKind } from "../providers/types.js";
 
 const DEFAULT_MODELS: Record<ProviderKind, { value: string; label: string }[]> = {
   anthropic: [
-    { value: "claude-opus-4-8", label: "claude-opus-4-8 (most capable, recommended)" },
+    { value: "claude-fable-5", label: "claude-fable-5 (most powerful — the namesake ✳)" },
+    { value: "claude-opus-4-8", label: "claude-opus-4-8 (recommended balance)" },
     { value: "claude-sonnet-4-6", label: "claude-sonnet-4-6 (fast + smart)" },
     { value: "claude-haiku-4-5", label: "claude-haiku-4-5 (fastest, cheapest)" },
   ],

@@ -93,7 +93,7 @@ In the REPL: `/new` resets the session, `/memory` shows what it remembers about 
 ## Features
 
 - **Runs 100% locally** — your API key, files, and history never leave your machine (`~/.onfable/`).
-- **Any model** — Claude (default), OpenAI, OpenRouter, or any OpenAI-compatible endpoint (Ollama, LM Studio, vLLM…).
+- **Any model** — Claude (default, up to **Claude Fable 5** — a fable running onfable, the name wrote itself), OpenAI, OpenRouter, or any OpenAI-compatible endpoint (Ollama, LM Studio, vLLM…).
 - **Real tools** — shell commands, file read/write/edit, directory listing, web search, web fetch.
 - **Approval-first** — every shell command and file write shows you exactly what it wants to do and waits for your yes. `--yolo` when you trust it.
 - **Persistent memory** — durable notes about you in plain markdown, injected into every session.
@@ -190,4 +190,6 @@ If onfable saved you some typing today, a ⭐ helps other people find it.
 
 <div align="center">
 <sub><a href="https://onfable.xyz">onfable.xyz</a> · <a href="https://x.com/onfable">@onfable</a></sub>
+<br/>
+<sub>onfable is an independent open-source project, not affiliated with or endorsed by Anthropic, OpenAI, or any model provider.</sub>
 </div>
