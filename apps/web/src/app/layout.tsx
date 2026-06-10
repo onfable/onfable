@@ -35,6 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@onfable",
+    creator: "@onfable",
     title: "onfable — the open-source AI agent in your terminal",
     description:
       "Runs commands, edits files, browses the web, and remembers you. One-line install. Any model.",
@@ -51,6 +53,7 @@ const jsonLd = {
   description:
     "Open-source autonomous AI agent for your terminal. Runs commands, edits files, browses the web, and remembers you.",
   url: SITE_URL,
+  sameAs: ["https://github.com/onfable/onfable", "https://x.com/onfable"],
   license: "https://opensource.org/license/mit",
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
