@@ -15,11 +15,19 @@ it runs commands, edits files, browses the web, and remembers you.
 
 [**onfable.xyz**](https://onfable.xyz) · [X/Twitter](https://x.com/onfable) · [Install](#install) · [Quickstart](#quickstart) · [Features](#features) · [Architecture](#architecture) · [Contributing](CONTRIBUTING.md)
 
+<br/>
+
+<img src="assets/demo.gif" alt="onfable in action — one sentence in, real work out" width="720" />
+
+<br/>
+
 </div>
 
 ---
 
 ## What it looks like
+
+One sentence in. Real work out — with your approval on every command. Next session, it already knows how you like things done.
 
 ```console
 $ onfable
@@ -38,8 +46,6 @@ Done — 34 files sorted into Images (19), Docs (9), Archives (4), and Installer
 
   ⚒ memory_save: user likes Downloads organized by file type
 ```
-
-One sentence in. Real work out — with your approval on every command. Next session, it already knows how you like things done.
 
 ## Why onfable?
 
@@ -73,6 +79,10 @@ irm onfable.xyz/install.ps1 | iex
 ```sh
 npm install -g onfable
 ```
+
+<div align="center">
+<img src="assets/install.png" alt="Installing onfable in one line" width="600" />
+</div>
 
 ## Quickstart
 
