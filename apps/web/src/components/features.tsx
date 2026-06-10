@@ -8,7 +8,7 @@ const FEATURES = [
   },
   {
     title: "Works with any model",
-    body: "Claude by default, or OpenAI, OpenRouter, and any OpenAI-compatible endpoint. Switch providers with one command, override the model per session.",
+    body: "Claude by default — up to Claude Fable 5, the most powerful model you can run (and yes, the name is fate). Or OpenAI, OpenRouter, and any OpenAI-compatible endpoint. Switch with one command.",
     icon: (
       <path d="M12 3v4m0 10v4m9-9h-4M7 12H3m13.6-5.6l-2.8 2.8m-3.6 3.6l-2.8 2.8m11.2 0l-2.8-2.8M9.2 9.2L6.4 6.4" />
     ),
