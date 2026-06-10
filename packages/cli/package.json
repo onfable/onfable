@@ -1,0 +1,53 @@
+{
+  "name": "onfable",
+  "version": "0.1.0",
+  "description": "The open-source autonomous AI agent that lives in your terminal. Runs commands, edits files, browses the web, and remembers you.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://onfable.xyz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onfable/onfable.git",
+    "directory": "packages/cli"
+  },
+  "bugs": "https://github.com/onfable/onfable/issues",
+  "keywords": [
+    "ai",
+    "agent",
+    "cli",
+    "assistant",
+    "autonomous",
+    "claude",
+    "openai",
+    "openrouter",
+    "llm",
+    "terminal"
+  ],
+  "bin": {
+    "onfable": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.74.0",
+    "@clack/prompts": "^0.11.0",
+    "commander": "^14.0.0",
+    "openai": "^6.9.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
+  }
+}

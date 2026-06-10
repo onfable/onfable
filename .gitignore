@@ -1,0 +1,24 @@
+# dependencies
+node_modules/
+
+# builds
+dist/
+.next/
+out/
+
+# vercel
+.vercel/
+
+# env
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# misc
+.DS_Store
+*.tsbuildinfo

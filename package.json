@@ -1,0 +1,11 @@
+{
+  "name": "onfable-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "dev:web": "pnpm --filter web dev",
+    "dev:cli": "pnpm --filter onfable dev"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

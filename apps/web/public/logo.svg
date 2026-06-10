@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" role="img" aria-label="onfable">
+  <rect width="280" height="64" fill="#000"/>
+  <g stroke="#fff" stroke-width="3.5" stroke-linecap="round">
+    <line x1="32" y1="16" x2="32" y2="48"/>
+    <line x1="16" y1="32" x2="48" y2="32"/>
+    <line x1="20.7" y1="20.7" x2="43.3" y2="43.3"/>
+    <line x1="43.3" y1="20.7" x2="20.7" y2="43.3"/>
+  </g>
+  <text x="64" y="41" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" font-weight="500" letter-spacing="-0.5" fill="#fff">onfable</text>
+</svg>
