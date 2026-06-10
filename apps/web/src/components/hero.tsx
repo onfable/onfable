@@ -29,7 +29,7 @@ export function Hero() {
         </p>
         <div className="rise mx-auto mt-10 flex max-w-xl flex-col items-center gap-4">
           <div className="flex w-full items-center gap-2 rounded-lg border border-edge bg-card py-2 pl-4 pr-2">
-            <code className="flex-1 overflow-x-auto whitespace-nowrap text-left font-[family-name:var(--font-geist-mono)] text-sm text-white/90">
+            <code className="scrollbar-none flex-1 overflow-x-auto whitespace-nowrap text-left font-[family-name:var(--font-geist-mono)] text-sm text-white/90">
               <span className="select-none text-faint">$ </span>
               {INSTALL_CMD}
             </code>

@@ -81,6 +81,16 @@ body {
   }
 }
 
+/* ---------- Scrollable code without visible scrollbars ---------- */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 /* ---------- Terminal demo caret ---------- */
 .caret::after {
   content: "▋";
