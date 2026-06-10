@@ -1,6 +1,6 @@
 {
   "name": "onfable",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The open-source autonomous AI agent that lives in your terminal. Runs commands, edits files, browses the web, and remembers you.",
   "type": "module",
   "license": "MIT",
