@@ -5,7 +5,7 @@ const FAQS = [
   },
   {
     q: "Which models can I use?",
-    a: "Anthropic Claude — including Claude Fable 5, the strongest model available (a fable running onfable: the name wrote itself). Also OpenAI, anything on OpenRouter, or any OpenAI-compatible endpoint, including local servers like Ollama or LM Studio. Switch anytime with `onfable setup`. onfable is an independent open-source project — bring your own API key.",
+    a: "Anthropic Claude — including Claude Fable 5, the strongest model available (a fable running onfable: the name wrote itself). Also OpenAI, anything on OpenRouter, the Bankr LLM Gateway, or any OpenAI-compatible endpoint, including local servers like Ollama or LM Studio. Switch anytime with `onfable setup`. onfable is an independent open-source project — bring your own API key.",
   },
   {
     q: "Is it safe to let an AI run commands on my machine?",

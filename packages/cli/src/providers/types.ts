@@ -41,7 +41,7 @@ export interface Provider {
   validate(): Promise<void>;
 }
 
-export type ProviderKind = "anthropic" | "openai" | "openrouter" | "custom";
+export type ProviderKind = "anthropic" | "openai" | "openrouter" | "bankr" | "custom";
 
 export interface ProviderConfig {
   provider: ProviderKind;
