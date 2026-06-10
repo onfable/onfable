@@ -16,7 +16,21 @@ export interface ChatFlags {
 
 const BANNER = `
   ${pc.bold("✳ onfable")} ${pc.dim("— your machine, your agent, your story")}
-  ${pc.dim("/new resets the session · /memory shows saved notes · /exit quits")}
+  ${pc.dim("type /help for commands")}
+`;
+
+const HELP = `
+  ${pc.bold("Slash commands")}
+    /new      reset the session (history is saved to ~/.onfable/history)
+    /memory   show everything the agent remembers about you
+    /help     show this help
+    /exit     quit (also: /quit or Ctrl+C)
+
+  ${pc.bold("Flags")} ${pc.dim("(pass when starting onfable)")}
+    --yolo        skip tool approval prompts
+    --model <id>  override the configured model for this session
+
+  ${pc.dim("Config: ~/.onfable/config.json · Memory: ~/.onfable/memory.md")}
 `;
 
 export async function chatCommand(flags: ChatFlags): Promise<void> {
@@ -43,6 +57,10 @@ export async function chatCommand(flags: ChatFlags): Promise<void> {
     if (!trimmed) continue;
 
     if (trimmed === "/exit" || trimmed === "/quit") break;
+    if (trimmed === "/help") {
+      console.log(HELP);
+      continue;
+    }
     if (trimmed === "/new") {
       saveSession(messages);
       messages = [];
