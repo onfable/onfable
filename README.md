@@ -8,15 +8,51 @@ The open-source autonomous AI agent that lives in your terminal —
 it runs commands, edits files, browses the web, and remembers you.
 
 [![npm](https://img.shields.io/npm/v/onfable?color=white&labelColor=black)](https://www.npmjs.com/package/onfable)
+[![npm downloads](https://img.shields.io/npm/dm/onfable?color=white&labelColor=black)](https://www.npmjs.com/package/onfable)
 [![CI](https://github.com/onfable/onfable/actions/workflows/ci.yml/badge.svg)](https://github.com/onfable/onfable/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-white?labelColor=black)](LICENSE)
-[![Node](https://img.shields.io/badge/node-%E2%89%A520-white?labelColor=black)](https://nodejs.org)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-white?labelColor=black)](CONTRIBUTING.md)
 
 [**onfable.xyz**](https://onfable.xyz) · [X/Twitter](https://x.com/onfable) · [Install](#install) · [Quickstart](#quickstart) · [Features](#features) · [Architecture](#architecture) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
 ---
+
+## What it looks like
+
+```console
+$ onfable
+
+  ✳ onfable — your machine, your agent, your story
+
+› organize my downloads folder by file type
+
+  ⚒ list_dir: ~/Downloads → 38 lines
+  ⚒ run_command: mkdir -p Images Docs Archives Installers
+    ✓ approved
+  ⚒ run_command: mv *.png *.jpg Images/ && mv *.pdf Docs/ …
+    ✓ approved
+
+Done — 34 files sorted into Images (19), Docs (9), Archives (4), and Installers (2).
+
+  ⚒ memory_save: user likes Downloads organized by file type
+```
+
+One sentence in. Real work out — with your approval on every command. Next session, it already knows how you like things done.
+
+## Why onfable?
+
+|  | Chatbot | IDE copilot | **onfable** |
+|---|:---:|:---:|:---:|
+| Tells you the commands | ✅ | ✅ | ✅ |
+| **Runs them for you** | ❌ | partial | ✅ |
+| Edits any file on your machine | ❌ | in-project | ✅ |
+| Searches & reads the web | varies | ❌ | ✅ no key needed |
+| Remembers you across sessions | ❌ | ❌ | ✅ plain markdown |
+| Your choice of model/provider | ❌ | ❌ | ✅ Claude, OpenAI, OpenRouter, local |
+| Approval gate on every action | — | — | ✅ (or `--yolo`) |
+| Open source, runs 100% locally | ❌ | ❌ | ✅ MIT |
 
 ## Install
 
@@ -134,12 +170,24 @@ The published tarball contains only `dist/` and the README (`files` allowlist).
 
 ## Roadmap
 
-- Telegram & Discord channel adapters
-- Scheduled tasks ("every morning, summarize my inbox")
-- Subagents for parallel work
-- Sandboxed execution backends
-- Markdown rendering in the terminal
+- [ ] Telegram & Discord channel adapters
+- [ ] Scheduled tasks ("every morning, summarize my inbox")
+- [ ] Subagents for parallel work
+- [ ] Sandboxed execution backends
+- [ ] Markdown rendering in the terminal
+
+Want one of these sooner? [Open an issue](https://github.com/onfable/onfable/issues) or upvote an existing one — roadmap order follows demand.
+
+## Contributing
+
+Contributions of every size are welcome — a new tool is ~40 lines, a typo fix is one. Start with [CONTRIBUTING.md](CONTRIBUTING.md), or grab anything labeled [`good first issue`](https://github.com/onfable/onfable/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
+
+If onfable saved you some typing today, a ⭐ helps other people find it.
 
 ## License
 
 [MIT](LICENSE) — go build your own story.
+
+<div align="center">
+<sub><a href="https://onfable.xyz">onfable.xyz</a> · <a href="https://x.com/onfable">@onfable</a></sub>
+</div>
