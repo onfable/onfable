@@ -122,6 +122,16 @@ npm publish --access public
 
 The published tarball contains only `dist/` and the README (`files` allowlist).
 
+## Troubleshooting
+
+| Symptom | Fix |
+|---|---|
+| `onfable: command not found` after npm install | Your npm global bin isn't on PATH. Run `npm prefix -g` and add `<that>/bin` to your shell profile (Windows: reopen the terminal). |
+| `EACCES` on `npm install -g` | Don't sudo. Point npm at a user-writable prefix: `npm config set prefix ~/.npm-global` and add `~/.npm-global/bin` to PATH. |
+| "Could not validate" in `onfable setup` | Wrong key, no credit on the provider account, or a typo'd model id. You can save anyway and fix later with `onfable setup`. |
+| Agent says search is unavailable | The no-key DuckDuckGo endpoint is occasionally rate-limited; it recovers on its own. `web_fetch` with a direct URL always works. |
+| Want to start completely fresh | `rm -rf ~/.onfable` removes config, memory, and history. |
+
 ## Roadmap
 
 - Telegram & Discord channel adapters
