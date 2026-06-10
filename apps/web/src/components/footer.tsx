@@ -13,6 +13,15 @@ export function Footer() {
         </p>
         <div className="flex items-center gap-6 text-sm text-muted">
           <a
+            href="https://x.com/onfable"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="onfable on X"
+            className="transition-colors hover:text-white"
+          >
+            X / Twitter
+          </a>
+          <a
             href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"

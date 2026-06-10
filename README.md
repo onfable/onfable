@@ -12,7 +12,7 @@ it runs commands, edits files, browses the web, and remembers you.
 [![License: MIT](https://img.shields.io/badge/license-MIT-white?labelColor=black)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%E2%89%A520-white?labelColor=black)](https://nodejs.org)
 
-[**onfable.xyz**](https://onfable.xyz) · [Install](#install) · [Quickstart](#quickstart) · [Features](#features) · [Architecture](#architecture) · [Contributing](CONTRIBUTING.md)
+[**onfable.xyz**](https://onfable.xyz) · [X/Twitter](https://x.com/onfable) · [Install](#install) · [Quickstart](#quickstart) · [Features](#features) · [Architecture](#architecture) · [Contributing](CONTRIBUTING.md)
 
 </div>
 
