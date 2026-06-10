@@ -27,6 +27,10 @@ const DEFAULT_MODELS: Record<ProviderKind, { value: string; label: string }[]> =
     { value: "gpt-4.1", label: "gpt-4.1" },
   ],
   openrouter: [],
+  bankr: [
+    { value: "claude-opus-4.6", label: "claude-opus-4.6" },
+    { value: "gpt-5.2", label: "gpt-5.2" },
+  ],
   custom: [],
 };
 
@@ -47,6 +51,7 @@ export async function setupCommand(): Promise<OnfableConfig> {
       { value: "anthropic", label: "Anthropic (Claude)", hint: "recommended" },
       { value: "openai", label: "OpenAI" },
       { value: "openrouter", label: "OpenRouter", hint: "hundreds of models, one key" },
+      { value: "bankr", label: "Bankr LLM Gateway", hint: "llm.bankr.bot" },
       { value: "custom", label: "Custom OpenAI-compatible endpoint" },
     ],
   });
@@ -68,6 +73,7 @@ export async function setupCommand(): Promise<OnfableConfig> {
     anthropic: "console.anthropic.com → API keys",
     openai: "platform.openai.com → API keys",
     openrouter: "openrouter.ai → Keys",
+    bankr: "bankr.bot/api-keys — enable LLM Gateway on the key",
     custom: "your endpoint's API key",
   };
   const apiKey = await password({

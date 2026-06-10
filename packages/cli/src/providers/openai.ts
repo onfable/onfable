@@ -64,16 +64,27 @@ function toOpenAITools(
 const BASE_URLS: Record<string, string | undefined> = {
   openai: undefined,
   openrouter: "https://openrouter.ai/api/v1",
+  bankr: "https://llm.bankr.bot/v1",
 };
+
+function defaultHeaders(
+  config: ProviderConfig,
+): Record<string, string> | undefined {
+  if (config.provider === "openrouter") {
+    return { "HTTP-Referer": "https://onfable.xyz", "X-Title": "onfable" };
+  }
+  if (config.provider === "bankr") {
+    // Bankr's LLM Gateway authenticates via X-API-Key instead of a Bearer token
+    return { "X-API-Key": config.apiKey };
+  }
+  return undefined;
+}
 
 export function createOpenAIProvider(config: ProviderConfig): Provider {
   const client = new OpenAI({
     apiKey: config.apiKey,
     baseURL: config.baseUrl ?? BASE_URLS[config.provider],
-    defaultHeaders:
-      config.provider === "openrouter"
-        ? { "HTTP-Referer": "https://onfable.xyz", "X-Title": "onfable" }
-        : undefined,
+    defaultHeaders: defaultHeaders(config),
   });
 
   return {
