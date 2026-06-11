@@ -42,6 +42,9 @@ export const metadata: Metadata = {
       "Runs commands, edits files, browses the web, and remembers you. One-line install. Any model.",
   },
   robots: { index: true, follow: true },
+  other: {
+    "virtual-protocol-site-verification": "dfd5350256edc189184b290057022609",
+  },
 };
 
 const jsonLd = {
