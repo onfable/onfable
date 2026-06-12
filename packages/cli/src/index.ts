@@ -1,6 +1,7 @@
 import { Command } from "commander";
 import pc from "picocolors";
 import { chatCommand } from "./commands/chat.js";
+import { mcpAdd, mcpList, mcpLogin, mcpRemove } from "./commands/mcp.js";
 import { runCommand } from "./commands/run.js";
 import { setupCommand } from "./commands/setup.js";
 import { CONFIG_PATH, loadConfig, redactedConfig } from "./config.js";
@@ -35,6 +36,30 @@ program
   .action(async (task: string, flags: { yolo?: boolean; model?: string }) => {
     await runCommand(task, flags);
   });
+
+const mcp = program
+  .command("mcp")
+  .description("manage MCP servers (e.g. Base onchain wallet & DeFi)");
+mcp
+  .command("list")
+  .description("list added and available MCP servers")
+  .action(() => mcpList());
+mcp
+  .command("add <name>")
+  .description("add an MCP server by name (e.g. base) and authorize it")
+  .action(async (name: string) => {
+    await mcpAdd(name);
+  });
+mcp
+  .command("login <name>")
+  .description("authorize an added MCP server in your browser")
+  .action(async (name: string) => {
+    await mcpLogin(name);
+  });
+mcp
+  .command("remove <name>")
+  .description("remove an MCP server and clear its saved authorization")
+  .action((name: string) => mcpRemove(name));
 
 program
   .command("config")
