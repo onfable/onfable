@@ -4,7 +4,8 @@ import type {
   ToolCall,
   ToolResult,
 } from "../providers/types.js";
-import { getTool, tools } from "../tools/index.js";
+import { tools as builtinTools } from "../tools/index.js";
+import type { Tool } from "../tools/types.js";
 import { confirmTool } from "../ui/confirm.js";
 import {
   newline,
@@ -19,6 +20,8 @@ const MAX_TOOL_ITERATIONS = 25;
 
 export interface AgentOptions {
   yolo: boolean;
+  /** Extra tools beyond the built-ins (e.g. from connected MCP servers). */
+  extraTools?: Tool[];
 }
 
 /**
@@ -32,6 +35,12 @@ export async function runAgentTurn(
   userInput: string,
   options: AgentOptions,
 ): Promise<void> {
+  const allTools = [...builtinTools, ...(options.extraTools ?? [])];
+  const toolDefs = allTools.map((t) => ({
+    name: t.name,
+    description: t.description,
+    inputSchema: t.inputSchema,
+  }));
   messages.push({ role: "user", content: userInput });
 
   for (let iteration = 0; iteration < MAX_TOOL_ITERATIONS; iteration++) {
@@ -43,7 +52,7 @@ export async function runAgentTurn(
       const stream = provider.stream({
         system: buildSystemPrompt(),
         messages,
-        tools,
+        tools: toolDefs,
       });
       for await (const event of stream) {
         if (event.type === "text") {
@@ -75,7 +84,7 @@ export async function runAgentTurn(
 
     const results: ToolResult[] = [];
     for (const call of toolCalls) {
-      results.push(await executeToolCall(call, options));
+      results.push(await executeToolCall(call, options, allTools));
     }
     messages.push({ role: "tool_results", results });
   }
@@ -88,8 +97,9 @@ export async function runAgentTurn(
 async function executeToolCall(
   call: ToolCall,
   options: AgentOptions,
+  allTools: Tool[],
 ): Promise<ToolResult> {
-  const tool = getTool(call.name);
+  const tool = allTools.find((t) => t.name === call.name);
   if (!tool) {
     return {
       toolCallId: call.id,
