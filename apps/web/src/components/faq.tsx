@@ -16,6 +16,10 @@ const FAQS = [
     a: "Only on your machine. Your config (API key, chmod 600), memory, and session history live in ~/.onfable/. Conversations go directly from your machine to your chosen AI provider — there is no onfable server in between.",
   },
   {
+    q: "What is $ONFABLE?",
+    a: "The onfable ecosystem token on Base, launched via Virtuals Protocol (contract 0xeC76…dc5D — always verify). Today it's native to the agent itself (onfable's built-in Base MCP can hold and transfer it) and funds contributor bounties; token-weighted roadmap voting and access to future hosted features are planned. The software stays free and open source — no token is required to use onfable. Not financial advice.",
+  },
+  {
     q: "Can it do onchain / crypto actions?",
     a: "Yes — onfable supports Model Context Protocol (MCP) servers, and ships with Base. Run `onfable mcp add base`, authorize an agentic wallet in your browser (with spending limits, no private keys handed to onfable), and the agent can check balances, send USDC, swap, and use DeFi on Base. Every onchain action still asks for your approval first.",
   },

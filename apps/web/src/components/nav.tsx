@@ -20,6 +20,12 @@ export function Nav() {
           <a href="#features" className="hidden px-1 transition-colors hover:text-white sm:block">
             Features
           </a>
+          <a href="#roadmap" className="hidden px-1 transition-colors hover:text-white sm:block">
+            Roadmap
+          </a>
+          <a href="#token" className="hidden px-1 transition-colors hover:text-white sm:block">
+            $ONFABLE
+          </a>
           <a href="#faq" className="hidden px-1 transition-colors hover:text-white sm:block">
             FAQ
           </a>
