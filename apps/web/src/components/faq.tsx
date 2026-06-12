@@ -16,6 +16,10 @@ const FAQS = [
     a: "Only on your machine. Your config (API key, chmod 600), memory, and session history live in ~/.onfable/. Conversations go directly from your machine to your chosen AI provider — there is no onfable server in between.",
   },
   {
+    q: "Can it do onchain / crypto actions?",
+    a: "Yes — onfable supports Model Context Protocol (MCP) servers, and ships with Base. Run `onfable mcp add base`, authorize an agentic wallet in your browser (with spending limits, no private keys handed to onfable), and the agent can check balances, send USDC, swap, and use DeFi on Base. Every onchain action still asks for your approval first.",
+  },
+  {
     q: "How is this different from a chatbot?",
     a: "A chatbot tells you the commands to run. onfable runs them — it lists your files, edits them, searches the web, retries when something fails, and remembers your preferences for next time. It's an agent with hands, not just a voice.",
   },

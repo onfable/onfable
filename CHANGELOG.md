@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **MCP server support.** Connect Model Context Protocol servers and the agent gains their tools.
+  - `onfable mcp add base` — connect [Base](https://www.base.org/agents) for onchain wallet, USDC transfers, swaps, and DeFi, authorized via your browser (agentic wallet, no private keys in onfable)
+  - `onfable mcp list` / `login <name>` / `remove <name>`
+  - MCP tools always require approval before running
+
 ## [0.1.2] - 2026-06-10
 
 ### Added
