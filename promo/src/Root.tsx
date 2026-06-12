@@ -1,6 +1,7 @@
 import { Composition } from "remotion";
 import { BaseMcp } from "./BaseMcp";
 import { Stinger } from "./Stinger";
+import { TokenUtility } from "./TokenUtility";
 import { Update013 } from "./Update013";
 
 export const Root: React.FC = () => {
@@ -26,6 +27,14 @@ export const Root: React.FC = () => {
         id="Stinger"
         component={Stinger}
         durationInFrames={105}
+        fps={30}
+        width={1080}
+        height={1080}
+      />
+      <Composition
+        id="TokenUtility"
+        component={TokenUtility}
+        durationInFrames={630}
         fps={30}
         width={1080}
         height={1080}
