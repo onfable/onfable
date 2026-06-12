@@ -106,7 +106,7 @@ export function Token() {
             Chart on DexScreener
           </a>
           <a
-            href="https://app.virtuals.io"
+            href="https://app.virtuals.io/virtuals/86251"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-white px-4 py-2.5 text-center text-sm font-medium text-black transition-opacity hover:opacity-85"
