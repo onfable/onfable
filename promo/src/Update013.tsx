@@ -1,8 +1,10 @@
 import {
   AbsoluteFill,
+  Audio,
   Sequence,
   interpolate,
   spring,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
@@ -293,6 +295,7 @@ export const Update013: React.FC = () => {
   });
   return (
     <AbsoluteFill style={{ background: "#000", opacity: fadeOut }}>
+      <Audio src={staticFile("soundtrack.wav")} />
       <Sequence from={0} durationInFrames={130}>
         <Hook />
       </Sequence>
