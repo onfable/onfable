@@ -8,6 +8,7 @@ The open-source autonomous AI agent that lives in your terminal —
 it runs commands, edits files, browses the web, and remembers you.
 
 [![npm](https://img.shields.io/npm/v/onfable?color=white&labelColor=black)](https://www.npmjs.com/package/onfable)
+[![npm downloads](https://img.shields.io/npm/dm/onfable?color=white&labelColor=black)](https://www.npmjs.com/package/onfable)
 [![Node](https://img.shields.io/badge/node-%E2%89%A520-white?labelColor=black)](https://nodejs.org)
 [![CI](https://github.com/onfable/onfable/actions/workflows/ci.yml/badge.svg)](https://github.com/onfable/onfable/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-white?labelColor=black)](LICENSE)
