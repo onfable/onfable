@@ -1,0 +1,20 @@
+{
+  "name": "onfable-promo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Remotion promo videos for onfable releases",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render Update013 ../assets/update-0.1.3.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.9.2"
+  }
+}
