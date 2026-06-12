@@ -3,18 +3,28 @@ import path from "node:path";
 import os from "node:os";
 import type { ProviderConfig } from "./providers/types.js";
 
+export interface McpServerConfig {
+  /** Short id used in commands and on disk, e.g. "base". */
+  name: string;
+  /** Streamable HTTP endpoint, e.g. https://mcp.base.org */
+  url: string;
+}
+
 export interface OnfableConfig extends ProviderConfig {
   yolo?: boolean;
+  mcpServers?: McpServerConfig[];
 }
 
 export const ONFABLE_DIR = path.join(os.homedir(), ".onfable");
 export const CONFIG_PATH = path.join(ONFABLE_DIR, "config.json");
 export const MEMORY_PATH = path.join(ONFABLE_DIR, "memory.md");
 export const HISTORY_DIR = path.join(ONFABLE_DIR, "history");
+export const MCP_DIR = path.join(ONFABLE_DIR, "mcp");
 
 export function ensureDirs(): void {
   fs.mkdirSync(ONFABLE_DIR, { recursive: true });
   fs.mkdirSync(HISTORY_DIR, { recursive: true });
+  fs.mkdirSync(MCP_DIR, { recursive: true });
 }
 
 export function loadConfig(): OnfableConfig | null {

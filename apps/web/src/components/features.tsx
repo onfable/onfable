@@ -35,6 +35,13 @@ const FEATURES = [
     ),
   },
   {
+    title: "MCP servers, incl. Base",
+    body: "Connect Model Context Protocol servers and the agent gains their tools. Ships with Base — onchain wallet, USDC transfers, swaps, and DeFi — via a browser-authorized agentic wallet. No private keys in onfable.",
+    icon: (
+      <path d="M12 2l8 4.5v9L12 20l-8-4.5v-9L12 2zM12 2v9m0 0l8-4.5M12 11l-8-4.5" />
+    ),
+  },
+  {
     title: "Open source & hackable",
     body: "MIT licensed, one lean TypeScript codebase. Add a tool in ~40 lines. Read every prompt it sends. Fork it and make it yours.",
     icon: (
