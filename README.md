@@ -88,7 +88,7 @@ npm install -g onfable
 ## Quickstart
 
 ```sh
-onfable setup    # pick a provider (Anthropic / OpenAI / OpenRouter / custom), paste your key
+onfable setup    # pick a provider (Anthropic / OpenAI / OpenRouter / Bankr / custom), paste your key
 onfable          # interactive chat — ask it to do things
 ```
 
@@ -99,7 +99,13 @@ onfable run "organize my downloads folder by file type"
 onfable run "find every TODO in this repo and write them to TODO.md" --yolo
 ```
 
-In the REPL: `/new` resets the session, `/memory` shows what it remembers about you, `/exit` quits. Flags: `--yolo` skips approval prompts, `--model <id>` overrides the model for one session.
+Go onchain (optional):
+
+```sh
+onfable mcp add base   # authorize an agentic wallet in your browser
+```
+
+In the REPL: `/help` lists commands, `/new` resets the session, `/memory` shows what it remembers about you, `/exit` quits. Flags: `--yolo` skips approval prompts, `--model <id>` overrides the model for one session. Other commands: `onfable config`, `onfable mcp list|add|login|remove`.
 
 ## Features
 
@@ -127,19 +133,22 @@ Every onchain action still asks for your approval first.
 ```
 onfable (CLI)
    │
-   ├── commands/        setup wizard · chat REPL · one-shot run
+   ├── commands/        setup wizard · chat REPL · one-shot run · mcp manager
    │
    ├── agent loop       stream → tool calls → approval → execute → repeat
    │     │              (max 25 iterations per turn)
    │     │
    │     ├── providers  Anthropic Messages API ─┐
    │     │              OpenAI-compatible API  ─┤→ one neutral stream interface
-   │     │              (OpenAI/OpenRouter/custom baseURL)
+   │     │              (OpenAI/OpenRouter/Bankr/custom baseURL)
    │     │
-   │     └── tools      run_command · read/write/edit_file · list_dir
-   │                    web_search · web_fetch · memory_save/recall
+   │     ├── tools      run_command · read/write/edit_file · list_dir
+   │     │              web_search · web_fetch · memory_save/recall
+   │     │
+   │     └── mcp        Streamable HTTP client + browser OAuth (PKCE)
+   │                    Base built in → base__send, base__swap, …
    │
-   └── ~/.onfable/      config.json (0600) · memory.md · history/
+   └── ~/.onfable/      config.json (0600) · memory.md · history/ · mcp/ tokens
 ```
 
 ## Monorepo
@@ -148,6 +157,9 @@ onfable (CLI)
 |---|---|
 | [`packages/cli`](packages/cli) | The `onfable` npm package — the agent itself |
 | [`apps/web`](apps/web) | [onfable.xyz](https://onfable.xyz) — Next.js site, serves the install scripts |
+| [`promo`](promo) | Remotion compositions for release videos (outside the workspace) |
+| [`scripts`](scripts) | Generators for social assets and synthesized soundtracks |
+| [`assets`](assets) | Rendered media: demo GIF, release videos, brand stinger |
 
 ### Develop
 
@@ -193,13 +205,23 @@ The published tarball contains only `dist/` and the README (`files` allowlist).
 
 ## Roadmap
 
+- [x] CLI agent: shell, files, web, persistent memory (`v0.1.0`)
+- [x] Multi-provider: Claude (incl. Fable 5), OpenAI, OpenRouter, Bankr, custom (`v0.1.1`–`v0.1.2`)
+- [x] MCP support with Base built in — wallet, USDC, swaps, DeFi (`v0.1.3`)
+- [ ] Contributor bounty program paid in $ONFABLE
 - [ ] Telegram & Discord channel adapters
+- [ ] Markdown rendering in the terminal
 - [ ] Scheduled tasks ("every morning, summarize my inbox")
 - [ ] Subagents for parallel work
-- [ ] Sandboxed execution backends
-- [ ] Markdown rendering in the terminal
+- [ ] Hosted onfable — cloud agents, cross-device memory sync, sandboxed backends
 
-Want one of these sooner? [Open an issue](https://github.com/onfable/onfable/issues) or upvote an existing one — roadmap order follows demand.
+Full phased roadmap at [onfable.xyz/#roadmap](https://onfable.xyz/#roadmap). Want something sooner? [Open an issue](https://github.com/onfable/onfable/issues) or upvote an existing one — order follows demand.
+
+## $ONFABLE
+
+The onfable ecosystem token on Base, launched via [Virtuals Protocol](https://app.virtuals.io/virtuals/86251) — contract [`0xeC76…dc5D`](https://basescan.org/token/0xeC76Ee25C41B51927b24b173622547A8dC89dc5D) (always verify). Live utility today: the agent itself can hold and transfer it via the built-in Base MCP. Bounties, roadmap governance, and hosted-feature access are planned — details and status labels at [onfable.xyz/#token](https://onfable.xyz/#token).
+
+The software is and will remain free and open source — **no token is required to use onfable**. Nothing here is financial advice.
 
 ## Contributing
 
